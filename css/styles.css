@@ -2,102 +2,115 @@
 Колір Slat #434455 Для параграфа
 iris #4D5AE5 для кнопок */
 
+:root {
+  --сolor-accent: #4d5ae5;
+  --color-for-title: #2e2f42;
+  --color-for-paragraph: #434455;
+  --color-white: #ffffff;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  color: #2e2f42;
+  color: var(--color-for-paragraph);
+  background-color: var(--color-white);
   font-size: 16px;
   line-height: 1.5;
-  color: #434455;
 }
 
 li {
   list-style-type: none;
 }
 
-h3 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
-
 .part-of-logo {
-  width: 44px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #4d5ae5;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--сolor-accent);
 }
 
 .logo {
+  color: var(--color-for-title);
   text-transform: uppercase;
-  color: #2e2f42;
-  width: 71px;
-  height: 24px;
   font-family: "Raleway";
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo-footer {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.16;
+  color: var(--сolor-accent);
   text-transform: uppercase;
+  font-family: "Raleway";
   text-decoration: none;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .link {
   text-decoration: none;
-  color: #2e2f42;
+  color: var(--color-for-title);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  line-height: 1.5;
 }
+
 .active {
   color: #404bbf;
 }
 .link:hover,
 .link:focus {
-  color: #4d5ae5;
+  color: var(--сolor-accent);
 }
 
-.adress {
-  color: #434455;
+.adress-link {
+  color: var(--color-for-paragraph);
   text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  line-height: 1.5;
   font-style: normal;
 }
 
-.adress:hover,
-address:focus {
-  color: #4d5ae5;
+.adress-link:hover,
+.adress-link:focus {
+  color: var(--сolor-accent);
 }
 
 .hero {
-  background: #2e2f42;
+  background: var(--color-for-title);
+}
+
+.hero-title {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--color-white);
+  font-weight: 700;
 }
 
 .hero-button {
   width: 169px;
   height: 56px;
-  left: 636px;
-  top: 428px;
-  background: #4d5ae5;
+  background: var(--сolor-accent);
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
-.our-team {
+.team {
   background: #f4f4fd;
   font-size: 36px;
   line-height: 1.1;
 }
 
-.our-team .card {
-  background: #ffffff;
+.team .card {
+  background: var(--color-white);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -105,32 +118,38 @@ address:focus {
 
 .footer,
 .footer a {
-  background-color: #2e2f42;
+  background-color: var(--color-for-title);
   color: #f4f4fd;
+  letter-spacing: 0.03em;
 }
 
 .footer p {
   color: #e7e9fc;
+  letter-spacing: 0.02em;
 }
 
-.section3-title,
-.our-team-title {
+.section-title {
   font-size: 36px;
   line-height: 1.1;
-  color: #2e2f42;
+  color: var(--color-for-title);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  font-weight: 700;
 }
 
-.our-team h3 {
+.team-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #2e2f42;
+  color: var(--color-for-title);
+  letter-spacing: 0.02em;
 }
-.our-team p {
-  font-weight: 500;
+.team-position {
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #2e2f42;
+  color: var(--color-for-paragraph);
+  letter-spacing: 0.02em;
 }
 .visually-hidden {
   position: absolute;
@@ -148,10 +167,13 @@ address:focus {
 .feature-title {
   font-size: 20px;
   line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .feature-text {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.02em;
 }
 
 /* Portfolio */
@@ -175,10 +197,15 @@ address:focus {
   color: #e7e9fc;
 }
 
-.subtitle-gallery {
+.gallery-subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
+  color: var(--color-for-title);
   letter-spacing: 0.02em;
-  color: #2e2f42;
+}
+
+.gallery-text {
+  letter-spacing: 0.02em;
+  font-weight: 400;
 }
